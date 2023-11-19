@@ -4,7 +4,8 @@
   </description>
 
   <!-- set global properties for this build -->
-  <property name="main-class" value="aplicacion.Main"/>
+  <!-- <property name="main-class" value="aplicacion.Main"/> -->
+  <property name="main-class" value="com.jwetherell.algorithms.aplicacion.Main"/>
   <property name="src" location="src"/>
   <property name="test" location="test"/>
   <property name="build" location="build"/>
@@ -57,7 +58,7 @@
   </target>
 
   <target name="dist" depends="build" description="generate thedistribution">
-    <jar jarfile="${dist}/java-algorithms-implementation-${DSTAMP}.jar"basedir="${build}">
+    <jar jarfile="${dist}/java-algorithms-implementation-${DSTAMP}.jar" basedir="${build}">
       <manifest>
         <attribute name="Main-Class" value="${main-class}"/>
       </manifest>
@@ -65,7 +66,7 @@
   </target>
 
   <target name="run_main" depends="dist">
-    <java jar="${dist}/java-algorithms-implementation-${DSTAMP}.jar"fork="true"/>
+    <java jar="${dist}/java-algorithms-implementation-${DSTAMP}.jar" fork="true"/>
   </target>
 
   <target name="build_tests" depends="dist" description="build the source">
