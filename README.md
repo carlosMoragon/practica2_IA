@@ -55,5 +55,26 @@ El target de dist también se debe modificar para que quede de la siguiente mane
    </jar>
 </target>
 ```
-Luego, se añade:<target name="run_main" depends="dist"><java jar="${dist}/java-algorithms-implementation-${DSTAMP}.jar"fork="true"/></target>A continuación se comprueba que el programa funciona:ant run_mainDespués, tomando como referencia los tests, se crea un programa princi-pal que genere un camino aplicando A*.A continuación, responda a las siguientes preguntas:1. ¿Qué variable representa la lista ABIERTA?2. ¿Qué variable representa la función g?3. ¿Qué variable representa la función f ?4. ¿Qué método habría que modificar para que la heurística representarala distancia aérea entre vértices?5. ¿Realiza este método reevaluación de nudos cuando se encuentra unanueva ruta a un determinado vértice? Justifique la respuesta.1.3.2. Material a entregarDeberá ser el siguiente:1. El proyecto completo, es decir, lo que se ha bajado inicialmente deGithub más el código implementado.2. README.md en formato Markdown respondiendo a las preguntas que seplantean en el presente enunciado.
+Luego, se añade:
+```xml
+<target name="run_main" depends="dist">
+   <java jar="${dist}/java-algorithms-implementation-${DSTAMP}.jar"fork="true"/>
+</target>
+```
+A continuación se comprueba que el programa funciona:
+> ant run_main
+
+Después, tomando como referencia los tests, se crea un programa principal que genere un camino aplicando A*.
+
+A continuación, responda a las siguientes preguntas:
+1. ¿Qué variable representa la lista ABIERTA?
+2. ¿Qué variable representa la función g?
+3. ¿Qué variable representa la función f ?
+4. ¿Qué método habría que modificar para que la heurística representarala distancia aérea entre vértices?
+5. ¿Realiza este método reevaluación de nudos cuando se encuentra una nueva ruta a un determinado vértice? Justifique la respuesta.
+
+#### Material a entregar
+Deberá ser el siguiente:
+1. El proyecto completo, es decir, lo que se ha bajado inicialmente de Github más el código implementado.
+2. README.md en formato Markdown respondiendo a las preguntas que seplantean en el presente enunciado.
 
