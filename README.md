@@ -17,9 +17,7 @@ A continuación, examine el código de la clase AStar.java, más concreta-mente,
 > java-algorithms-implementation/test/com/jwetherell/algorithms/graph/test/Graphs.java
 
 Después, de forma gradual, desarrolle la clase principal donde estará elprograma de la práctica. Comience con un código sencillo:
-
-<pre>
- <code>
+```java
  package aplicacion;
 
  public class Main {
@@ -27,8 +25,8 @@ Después, de forma gradual, desarrolle la clase principal donde estará elprogra
          System.out.println("Esto es una prueba");
      }
  }
- </code>
- </pre>
+```
+
  
 Es muy importante que no olvide la línea
 > package aplicacion;
@@ -74,7 +72,28 @@ A continuación, responda a las siguientes preguntas:
 5. ¿Realiza este método reevaluación de nudos cuando se encuentra una nueva ruta a un determinado vértice? Justifique la respuesta.
 
 #### Material a entregar
+
 Deberá ser el siguiente:
 1. El proyecto completo, es decir, lo que se ha bajado inicialmente de Github más el código implementado.
 2. README.md en formato Markdown respondiendo a las preguntas que seplantean en el presente enunciado.
+
+### Resolución de la práctica:
+
+#### Preguntas a resolver:
+
+1. ¿Qué variable representa la lista ABIERTA?
+> La lista ABIERTA se representa con la variable **OperSet**.
+> Esta variable está en la clase AStar, dentro del método aStar.
+![]()
+```java
+final List<Graph.Vertex<T>> openSet = new ArrayList<Graph.Vertex<T>>(size);
+```
+
+
+
+   
+3. ¿Qué variable representa la función g?
+4. ¿Qué variable representa la función f ?
+5. ¿Qué método habría que modificar para que la heurística representarala distancia aérea entre vértices?
+6. ¿Realiza este método reevaluación de nudos cuando se encuentra una nueva ruta a un determinado vértice? Justifique la respuesta.
 
