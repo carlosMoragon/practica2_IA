@@ -10,13 +10,13 @@ Práctica 2: Búsqueda sin Adversarios
 El propósito de esta práctica es que el alumno reutilice código que implementa el algoritmo A*. Se bajará código de Github, y lo utilizará para ejecutar este algoritmo para un grafo concreto.
 
 #### Pasos a realizar
-En primer lugar, debe bajarse de Github el código de algoritmos y estructurasde datos en Java de Justin Wetherell:
+En primer lugar, debe bajarse de Github el código de algoritmos y estructuras de datos en Java de Justin Wetherell:
 > git clone https://github.com/phishman3579/java-\algorithms-implementation.git
 
-A continuación, examine el código de la clase AStar.java, más concreta-mente, el método aStar. Luego, examine los tests del A* que hay en:
+A continuación, examine el código de la clase AStar.java, más concretamente, el método aStar. Luego, examine los tests del A* que hay en:
 > java-algorithms-implementation/test/com/jwetherell/algorithms/graph/test/Graphs.java
 
-Después, de forma gradual, desarrolle la clase principal donde estará elprograma de la práctica. Comience con un código sencillo:
+Después, de forma gradual, desarrolle la clase principal donde estará el programa de la práctica. Comience con un código sencillo:
 ```java
  package aplicacion;
 
@@ -31,14 +31,14 @@ Después, de forma gradual, desarrolle la clase principal donde estará elprogra
 Es muy importante que no olvide la línea
 > package aplicacion;
 
-Para poderlo compilar y ejecutar sin necesidad de crear ningún proyectoen un IDE (p.ej. Netbeans), modifique el fichero 
-<span title="Para entender el papel de los fichero build.xml en Java y el uso de ant se recomiendaque consulte el manual de Apache accesible a través de la siguiente dirección"><a href="https://ant.apache.org/manual/tutorial-HelloWorldWithAnt.html">build.xml</a></span>
+Para poderlo compilar y ejecutar sin necesidad de crear ningún proyecto en un IDE (p.ej. Netbeans), modifique el fichero 
+<span title="Para entender el papel de los fichero build.xml en Java y el uso de ant se recomienda que consulte el manual de Apache accesible a través de la siguiente dirección"><a href="https://ant.apache.org/manual/tutorial-HelloWorldWithAnt.html">build.xml</a></span>
  de la siguiente forma.
 
 En la zona indicada por 
 > <!– set global properties for this build –>
 
-, sedebe añadir la siguiente línea de código:
+, se debe añadir la siguiente línea de código:
 
 ```xml
 <property name="main-class" value="aplicacion.Main"/>
@@ -149,7 +149,10 @@ private static class UndirectedGraph {
 
 Representación del grafo:
 
-![imgs/WhatsApp Image 2023-11-21 at 21.30.27.jpeg](https://github.com/carlosMoragon/practica2_IA/blob/main/imgs/WhatsApp%20Image%202023-11-21%20at%2021.30.27.jpeg)
+<p align="center">
+ <img src="https://github.com/carlosMoragon/practica2_IA/blob/main/imgs/WhatsApp%20Image%202023-11-21%20at%2021.30.27.jpeg" width=500 height=auto/>
+</p>
+<!-- ![imgs/WhatsApp Image 2023-11-21 at 21.30.27.jpeg](https://github.com/carlosMoragon/practica2_IA/blob/main/imgs/WhatsApp%20Image%202023-11-21%20at%2021.30.27.jpeg){width=50 height=50} -->
 
 #### Ejecución del código:
 
@@ -172,7 +175,10 @@ Que es la ruta óptima.
 
 Representación de la ruta óptima:
 
-![imgs/WhatsApp Image 2023-11-21 at 21.30.26.jpeg](https://github.com/carlosMoragon/practica2_IA/blob/main/imgs/WhatsApp%20Image%202023-11-21%20at%2021.30.26.jpeg)
+<p align="center">
+ <img src="https://github.com/carlosMoragon/practica2_IA/blob/main/imgs/WhatsApp%20Image%202023-11-21%20at%2021.30.26.jpeg" width=500 height=auto/>
+</p>
+<!-- ![imgs/WhatsApp Image 2023-11-21 at 21.30.26.jpeg](https://github.com/carlosMoragon/practica2_IA/blob/main/imgs/WhatsApp%20Image%202023-11-21%20at%2021.30.26.jpeg){width=0 height=0} -->
 
 #### Preguntas a resolver:
 
