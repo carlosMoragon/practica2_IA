@@ -79,6 +79,22 @@ Deberá ser el siguiente:
 
 ### Resolución de la práctica:
 
+#### Código implementado:
+
+Se ha implementado una llamada al algoritmo **aStar** de la clase AStar, desde el método **main** de la clase Main.
+
+```java
+public static void main(String[] args) {
+    AStar<Integer> aStar = new AStar<Integer>();
+    UndirectedGraph undirectedGraph = new UndirectedGraph();
+    List<Graph.Edge<Integer>> path = aStar.aStar(undirectedGraph.graph, undirectedGraph.v1, undirectedGraph.v5);
+    System.out.println(path);
+}
+```
+
+Para implementar dicha llamada hemos copiado la clase UndirectedGraph
+
+
 #### Preguntas a resolver:
 
 1. ¿Qué variable representa la lista ABIERTA?
