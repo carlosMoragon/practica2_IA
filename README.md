@@ -82,18 +82,52 @@ Deberá ser el siguiente:
 #### Preguntas a resolver:
 
 1. ¿Qué variable representa la lista ABIERTA?
-> La lista ABIERTA se representa con la variable **OperSet**.
-> Esta variable está en la clase AStar, dentro del método aStar.
+> La lista ABIERTA se representa con la variable **OperSet**. </br>
+> Esta variable está en la **clase AStar**, dentro del **método aStar**.
 ![]()
 ```java
 final List<Graph.Vertex<T>> openSet = new ArrayList<Graph.Vertex<T>>(size);
 ```
+> Inicializada como:
+```java
+// The set of tentative nodes to be evaluated, initially containing the start node
+final List<Graph.Vertex<T>> openSet = new ArrayList<Graph.Vertex<T>>(size); 
+openSet.add(start);
+```
+</br>
 
+2. ¿Qué variable representa la función g?
+> La **función g** se representa con la variable **gScore**. </br>
+> Esta variable está en la **clase AStar**, dentro del **método aStar**.
+![]()
+```java
+final Map<Graph.Vertex<T>,Integer> gScore = new HashMap<Graph.Vertex<T>,Integer>();
+```
+> Inicializada como:
+```java
+// Cost from start along best known path.
+final Map<Graph.Vertex<T>,Integer> gScore = new HashMap<Graph.Vertex<T>,Integer>();
+gScore.put(start, 0);
+```
+</br>
 
+3. ¿Qué variable representa la función f ?
+> La **función f** se representa con la variable **fScore**. </br>
+> Esta variable está en la **clase AStar**, dentro del **método aStar**.
+![]()
+```java
+final Map<Graph.Vertex<T>,Integer> fScore = new HashMap<Graph.Vertex<T>,Integer>();
+```
+> Inicializada como:
+```java
+// Estimated total cost from start to goal through y.
+final Map<Graph.Vertex<T>,Integer> fScore = new HashMap<Graph.Vertex<T>,Integer>();
+for (Graph.Vertex<T> v : graph.getVertices())
+     fScore.put(v, Integer.MAX_VALUE);
+fScore.put(start, heuristicCostEstimate(start,goal));
+```
+</br>
 
-   
-3. ¿Qué variable representa la función g?
-4. ¿Qué variable representa la función f ?
-5. ¿Qué método habría que modificar para que la heurística representarala distancia aérea entre vértices?
-6. ¿Realiza este método reevaluación de nudos cuando se encuentra una nueva ruta a un determinado vértice? Justifique la respuesta.
+4. ¿Qué método habría que modificar para que la heurística representarala distancia aérea entre vértices?
+5. ¿Realiza este método reevaluación de nudos cuando se encuentra una nueva ruta a un determinado vértice? Justifique la respuesta.
 
