@@ -128,6 +128,64 @@ fScore.put(start, heuristicCostEstimate(start,goal));
 ```
 </br>
 
-4. ¿Qué método habría que modificar para que la heurística representarala distancia aérea entre vértices?
+4. ¿Qué método habría que modificar para que la heurística representara la distancia aérea entre vértices?
+> El método para representar la distancia aérea entre vértices sería: **heuristicCostEstimate**. </br>
+> Este método está en la **clase AStar**.
+![]()
+```java
+/**
+* Default heuristic: cost to each vertex is 1.
+*/
+@SuppressWarnings("unused") 
+protected int heuristicCostEstimate(Graph.Vertex<T> start, Graph.Vertex<T> goal) {
+     return 1;
+}
+```
+> Llamado desde 2 sitios en el método **aStar**:
+```java
+// This path is the best until now. Record it!
+cameFrom.put(neighbor, current);
+gScore.put(neighbor, tenativeGScore);
+final int estimatedFScore = gScore.get(neighbor) + heuristicCostEstimate(neighbor, goal);
+fScore.put(neighbor, estimatedFScore);
+```
+
+```java
+// Estimated total cost from start to goal through y.
+final Map<Graph.Vertex<T>,Integer> fScore = new HashMap<Graph.Vertex<T>,Integer>();
+for (Graph.Vertex<T> v : graph.getVertices())
+     fScore.put(v, Integer.MAX_VALUE);
+fScore.put(start, heuristicCostEstimate(start,goal));
+```
+</br>
+
 5. ¿Realiza este método reevaluación de nudos cuando se encuentra una nueva ruta a un determinado vértice? Justifique la respuesta.
+> El método que se usa para la reevaluación es **reconstructPath**. </br>
+> Este método está en la **clase AStar**.
+![]()
+```java
+private List<Graph.Edge<T>> reconstructPath(Map<Graph.Vertex<T>,Graph.Vertex<T>> cameFrom, Graph.Vertex<T> current) {
+    final List<Graph.Edge<T>> totalPath = new ArrayList<Graph.Edge<T>>();
+
+    while (current != null) {
+        final Graph.Vertex<T> previous = current;
+        current = cameFrom.get(current);
+        if (current != null) {
+            final Graph.Edge<T> edge = current.getEdge(previous);
+            totalPath.add(edge);
+        }
+    }
+    Collections.reverse(totalPath);
+    return totalPath;
+}
+```
+> Llamado desde el método **aStar**:
+```java
+while (!openSet.isEmpty()) {
+    final Graph.Vertex<T> current = openSet.get(0);
+    if (current.equals(goal))
+        return reconstructPath(cameFrom, goal);
+
+// CONTINUA EL CÓDIGO
+```
 
