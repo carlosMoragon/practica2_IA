@@ -147,13 +147,39 @@ private static class UndirectedGraph {
 }
 ```
 
+Representación del grafo:
+
+![]()
+
+#### Ejecución del código:
+
+Para realizar la ejecución del código se puede apoyar en un IDE o hacer uso de Framework **ant**.
+
+Para instalar **ant** en linux puede ejecutar el comando:
+> sudo apt install ant
+
+Tras instalar ant debe ejecutar el comando:
+> ant run_main
+
+Tras su ejecución obtendrá como salida:
+```txt
+[[ 1(0) ] -> [ 3(0) ] = 9
+, [ 3(0) ] -> [ 6(0) ] = 2
+, [ 6(0) ] -> [ 5(0) ] = 9
+]
+```
+Que es la ruta óptima.
+
+Representación de la ruta óptima:
+
+![]()
 
 #### Preguntas a resolver:
 
 1. ¿Qué variable representa la lista ABIERTA?
 > La lista ABIERTA se representa con la variable **OperSet**. </br>
 > Esta variable está en la **clase AStar**, dentro del **método aStar**.
-![]()
+
 ```java
 final List<Graph.Vertex<T>> openSet = new ArrayList<Graph.Vertex<T>>(size);
 ```
@@ -168,7 +194,7 @@ openSet.add(start);
 2. ¿Qué variable representa la función g?
 > La **función g** se representa con la variable **gScore**. </br>
 > Esta variable está en la **clase AStar**, dentro del **método aStar**.
-![]()
+
 ```java
 final Map<Graph.Vertex<T>,Integer> gScore = new HashMap<Graph.Vertex<T>,Integer>();
 ```
@@ -183,7 +209,7 @@ gScore.put(start, 0);
 3. ¿Qué variable representa la función f ?
 > La **función f** se representa con la variable **fScore**. </br>
 > Esta variable está en la **clase AStar**, dentro del **método aStar**.
-![]()
+
 ```java
 final Map<Graph.Vertex<T>,Integer> fScore = new HashMap<Graph.Vertex<T>,Integer>();
 ```
@@ -200,7 +226,7 @@ fScore.put(start, heuristicCostEstimate(start,goal));
 4. ¿Qué método habría que modificar para que la heurística representara la distancia aérea entre vértices?
 > El método para representar la distancia aérea entre vértices sería: **heuristicCostEstimate**. </br>
 > Este método está en la **clase AStar**.
-![]()
+
 ```java
 /**
 * Default heuristic: cost to each vertex is 1.
@@ -231,7 +257,7 @@ fScore.put(start, heuristicCostEstimate(start,goal));
 5. ¿Realiza este método reevaluación de nudos cuando se encuentra una nueva ruta a un determinado vértice? Justifique la respuesta.
 > El método que se usa para la reevaluación es **reconstructPath**. </br>
 > Este método está en la **clase AStar**.
-![]()
+
 ```java
 private List<Graph.Edge<T>> reconstructPath(Map<Graph.Vertex<T>,Graph.Vertex<T>> cameFrom, Graph.Vertex<T> current) {
     final List<Graph.Edge<T>> totalPath = new ArrayList<Graph.Edge<T>>();
