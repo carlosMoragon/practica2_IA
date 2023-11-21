@@ -149,7 +149,7 @@ private static class UndirectedGraph {
 
 Representación del grafo:
 
-![]()
+![imgs/WhatsApp Image 2023-11-21 at 21.30.27.jpeg](https://github.com/carlosMoragon/practica2_IA/blob/main/imgs/WhatsApp%20Image%202023-11-21%20at%2021.30.27.jpeg)
 
 #### Ejecución del código:
 
@@ -172,7 +172,7 @@ Que es la ruta óptima.
 
 Representación de la ruta óptima:
 
-![]()
+![imgs/WhatsApp Image 2023-11-21 at 21.30.26.jpeg](https://github.com/carlosMoragon/practica2_IA/blob/main/imgs/WhatsApp%20Image%202023-11-21%20at%2021.30.26.jpeg)
 
 #### Preguntas a resolver:
 
